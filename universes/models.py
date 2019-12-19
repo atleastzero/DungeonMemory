@@ -21,6 +21,7 @@ class Place(models.Model):
     name                = models.CharField(max_length=50)
     size                = models.CharField(max_length=200)
     total_population    = models.IntegerField()
+    last_visited        = models.DateTimeField(auto_now=True)
     place_id            = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
 
 class PlaceDemographics(models.Model):
